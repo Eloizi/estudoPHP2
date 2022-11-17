@@ -16,7 +16,7 @@ class Artigo
         date_default_timezone_set('America/Sao_Paulo');
 
         $data = date('Y-m-d H:i');
-        
+        //Salva a data automaticamente no banco de dados 
         $insereArtigo = $this->mysql->prepare('INSERT INTO post (tema, titulo,`data`, conteudo) VALUES (?,?,?,?);');
         $insereArtigo->bind_param('ssss', $tema, $titulo, $data, $conteudo);
         $insereArtigo->execute();

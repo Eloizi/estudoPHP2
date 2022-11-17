@@ -1,5 +1,4 @@
 <?php
-require_once("../templates/header.php");
 
 if (isset($_POST['submit'])) {
     // print_r($_POST['nome']);
@@ -21,15 +20,23 @@ if (isset($_POST['submit'])) {
     $endereco = $_POST['endereco'];
 
     $result = mysqli_query($conexao, "INSERT INTO usuario(nome,email,telefone,sexo,senha,data_nasc,cidade,estado,endereco) VALUES('$nome', '$email', '$telefone', '$sexo', '$senha', '$data_nasc', '$cidade', '$estado', '$endereco')");
-
     header("Location: index.php");
 }
+
 ?>
 
+
 <title>Formulário</title>
+
+
 </head>
 
+
 <body class="Cadastro-body">
+    <!-- chamando o estilo para a página -->
+    <header>
+        <link rel="stylesheet" href="../css/style.css">
+    </header>
 
     <div class="Cadastro-box">
         <form action="cadastro.php" method="POST">
@@ -92,3 +99,7 @@ if (isset($_POST['submit'])) {
 </body>
 
 </html>
+
+<!--Tela de cadastro desenvolvido com a ajuda do:
+Gustavo Neitzke, link para a playlist:
+<https://www.youtube.com/playlist?list=PLSHNk_yA5fNjoIRNHV-3FprsN3NWPcnnK> -->

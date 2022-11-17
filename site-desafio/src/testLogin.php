@@ -4,7 +4,7 @@
 
 if (isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha'])) {
     //Acessa o sistema
-    include_once("config_login.php");
+    include_once("config.php");
     $email = $_POST['email'];
     $senha = $_POST['senha'];
 
@@ -20,7 +20,7 @@ if (isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha']
         unset($_SESSION['email']);
         unset($_SESSION['senha']);
         echo '<script>alert("Os dados inseridos estão incorretos!");location.href="../login/index.php";</script>';
-        // header('Location: ../login/index.php');
+        //mensagem de alerta, para informar que os dados estão errados
 
     } else {
         $_SESSION['email'] = $email;

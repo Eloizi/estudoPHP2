@@ -1,8 +1,8 @@
-<?php
+<!-- <?php
     $dbHost = 'Localhost';
     $dbUsername = 'root';
     $dbPassword = '';
-    $dbName = 'login';
+    $dbName = 'site';
     
     $conexao = new mysqli($dbHost,$dbUsername,$dbPassword,$dbName);
 
@@ -10,4 +10,4 @@
     {
         echo "Erro";
     }
-?>
+?> -->
